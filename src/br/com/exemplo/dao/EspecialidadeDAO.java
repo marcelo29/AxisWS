@@ -42,4 +42,20 @@ public class EspecialidadeDAO extends ConnectionFactory {
 
 		return lista;
 	}
+
+	public Especialidade buscaEspecialidade(int id) {
+		Especialidade esp = new Especialidade();
+		try {
+			stmt = conn.prepareStatement("select * from tb_especialidade where id = " + id);
+			rs = stmt.executeQuery();
+			while (rs.next()) {
+				esp.setId(rs.getLong("id"));
+				esp.setNome(rs.getString("nome"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return esp;
+	}
+
 }

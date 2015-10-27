@@ -8,10 +8,10 @@ import com.mysql.jdbc.PreparedStatement;
 
 public class ConnectionFactory {
 
-	private static final String DRIVER = "com.mysql.jdbc.driver";
-	private static final String URL = "jdbc:mysql://localhost:3306/AxisWS";
-	private static final String USER = "root";
-	private static final String PASSWORD = "123";
+	private static final String DRIVER = "org.postgresql.Driver";
+	private static final String URL = "jdbc:postgresql://localhost:5432/AxisWS";
+	private static final String USER = "postgres";
+	private static final String PASSWORD = "flf";
 
 	static Connection conn = null;
 
