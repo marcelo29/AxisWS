@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+
 import br.com.exemplo.fatory.ConnectionFactory;
 import br.com.exemplo.model.Especialidade;
 
@@ -32,7 +33,6 @@ public class EspecialidadeDAO extends ConnectionFactory {
 			while (rs.next()) {
 				Especialidade esp = new Especialidade();
 
-				esp.setId(rs.getLong("id"));
 				esp.setNome(rs.getString("nome"));
 				lista.add(esp);
 			}
@@ -49,7 +49,6 @@ public class EspecialidadeDAO extends ConnectionFactory {
 			stmt = conn.prepareStatement("select * from tb_especialidade where id = " + id);
 			rs = stmt.executeQuery();
 			while (rs.next()) {
-				esp.setId(rs.getLong("id"));
 				esp.setNome(rs.getString("nome"));
 			}
 		} catch (Exception e) {

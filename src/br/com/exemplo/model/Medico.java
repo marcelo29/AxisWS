@@ -2,7 +2,6 @@ package br.com.exemplo.model;
 
 public class Medico {
 
-	private Long id;
 	private String nome;
 	private int crm;
 	private Especialidade especialidade;
@@ -11,19 +10,10 @@ public class Medico {
 
 	}
 
-	public Medico(Long id, String nome, int crm, Especialidade especialidade) {
-		this.id = id;
+	public Medico(String nome, int crm, Especialidade especialidade) {
 		this.nome = nome;
 		this.crm = crm;
 		this.especialidade = especialidade;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getNome() {

@@ -3,23 +3,14 @@ package br.com.exemplo.model;
 import java.util.Date;
 
 public class AgendaMedica {
-	
-	private Long id;
+
 	private Date dataAgenda;
 	private Medico medico;
 	private LocalAtendimento localAtendimento;
 	private Situacao situacao;
-	
+
 	public String toString() {
-		return dataAgenda.toString(); 
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
+		return dataAgenda.toString();
 	}
 
 	public Date getDataAgenda() {
@@ -53,5 +44,5 @@ public class AgendaMedica {
 	public void setSituacao(Situacao situacao) {
 		this.situacao = situacao;
 	}
-	
+
 }

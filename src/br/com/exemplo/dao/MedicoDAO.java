@@ -25,7 +25,7 @@ public class MedicoDAO extends ConnectionFactory {
 		return instance;
 	}
 
-	public ArrayList<Medico> listarTodasEspecialidades() {
+	public ArrayList<Medico> listarTodosMedicos() {
 		ArrayList<Medico> lista = new ArrayList<Medico>();
 
 		try {
@@ -34,7 +34,6 @@ public class MedicoDAO extends ConnectionFactory {
 			while (rs.next()) {
 				Medico med = new Medico();
 
-				med.setId(rs.getLong("id"));
 				med.setCrm(rs.getInt("crm"));
 				med.setNome(rs.getString("nome"));
 
